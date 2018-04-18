@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans|Lato:300,700');
+
+:root {
+  --main-color: #f97f51;
+  --text-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  background: #0c0c0c;
+}
+
+/* Background image */
+
+.img-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.img-background img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 3.8rem;
+  font-family: 'Black Han Sans';
+  color: var(--text-color);
+  text-shadow: 0 3px 3px rgba(0, 0, 0, .26);
+  padding: 10px 20px;
+  text-align: right;
+  margin: 0;
+  margin-top: 40px;
+}
+
+p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--text-color);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .16);
+  margin-right: 20px;
+  padding-right: 20px;
+  text-align: right;
+  line-height: 1.4;
+  border-right: 10px solid var(--main-color);
+  background: rgba(0, 0, 0, .44); 
+}
+
+p strong {
+  font-weight: 700;
+}
+
+/* Quotes */
+
+.text, .quotes {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  position: relative;
+  max-width: 600px;
+  border-right: 10px solid var(--main-color);
+  color: var(--text-color);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .16); 
+  padding: 0 20px;
+  line-height: 1.5;
+  text-align: right;
+  background: rgba(0, 0, 0, .44); 
+  margin: 10px 20px;
+}
+
+blockquote footer {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Links */
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#img-div {
+  width: 200px;
+  height: 200px;
+  opacity: .85;
+  margin-bottom: 20px;
+  transition: opacity .3s ease-out;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#img-caption {
+  text-align: center;
+  font-size: .8rem;
+  color: var(--text-color);
+}
+
+#img-div:hover {
+  opacity: 1;
+}
+
+.link {
+  border: 5px solid var(--main-color);
+  padding: 5px 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  background: transparent;
+  transition: background .3s ease-out;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.link:hover {
+  background: var(--main-color);
+}
+
+/* Navigation icons */
+
+.fa {
+  position: absolute;
+  font-size: 4rem;
+  color: var(--text-color);
+  padding: 20px;
+  cursor: pointer;
+  bottom: -10px;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, .26);
+  transition: transform 100ms ease-out;
+  z-index: 4;
+}
+
+.fa-angle-left {
+  left: 0px;
+}
+
+.fa-angle-left:hover {
+  transform: translateX(-10px);
+}
+
+.fa-angle-right {
+  right: 0px;
+}
+
+.fa-angle-right:hover {
+  transform: translateX(10px);
+}
+
+.fa-quote-right {
+  position: static;
+  font-size: 3rem;
+  cursor: default;
+}
+
+/* Media queries */
+
+@media all and (min-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+  p, blockquote {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    background: transparent;
+  }
+  .links {
+    align-items: flex-end;
+  }
+  #img-div {
+    margin-right: 20px;
+  }
+}
+
+@media all and (min-width: 800px) {
+  h1 {
+    font-size: 6rem;
+  }
+  p, blockquote {
+    font-size: 1.45rem;
+  }
+}
